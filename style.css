@@ -1,0 +1,122 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  background: linear-gradient(to right top, #e0eafc, #cfdef3);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Decorative background overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(#0d6efd22 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #343a40, #212529);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* Header */
+h1 {
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+/* Blog Cards */
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-weight: 600;
+  color: #333;
+}
+
+.card-text {
+  color: #555;
+}
+
+/* Read More Button */
+.btn-outline-primary {
+  transition: all 0.3s ease;
+  border-radius: 50px;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+}
+
+/* Footer */
+footer {
+  background: #212529;
+  color: #adb5bd;
+}
+
+footer a {
+  color: #adb5bd;
+  margin-right: 15px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+footer a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .card-img-top {
+    height: 180px;
+  }
+}
